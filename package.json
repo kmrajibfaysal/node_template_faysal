@@ -1,18 +1,31 @@
 {
-  "name": "first_node_app",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "K. M. Rajib Faysal <kmrajibfaysal@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "lodash": "^4.17.21"
+  "extends": ["prettier", "airbnb-base"],
+  "parserOptions": {
+    "ecmaVersion": 12
   },
-  "devDependencies": {
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.3.2"
-  }
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "no-console": 0,
+    "no-plusplus": 0,
+    "no-nested-ternary": 0,
+    "no-alert": 0,
+    "no-restricted-syntax": 0,
+    "indent": 0,
+    "linebreak-style": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100,
+        "tabWidth": 4,
+        "semi": true
+      }
+    ]
+  },
+  "plugins": ["prettier"]
 }
